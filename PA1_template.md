@@ -81,7 +81,7 @@ Make a histogram of the total number of steps taken each day.
 ggplot(daily_steps) + geom_histogram(aes(x=tot)) + ggtitle("Total steps taken each day")
 ```
 
-![](Reproducible_Research_I_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
 
 Calculate and report the mean and median of the total number of steps taken per day.
 
@@ -138,7 +138,7 @@ interval_steps
 ggplot(interval_steps) + geom_line(aes(x=interval,y=avg)) + ggtitle("Avg steps taken each day")
 ```
 
-![](Reproducible_Research_I_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
 
 Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?.
 
@@ -211,7 +211,7 @@ Make a histogram of the total number of steps taken each day and calculate and r
 ggplot(new_total_steps) + geom_histogram(aes(x=tot)) + ggtitle("Total no. of steps taken each day")
 ```
 
-![](Reproducible_Research_I_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
 
 ### 3b.Mean and median number of steps taken each day
 Mean
@@ -270,7 +270,7 @@ activity_pattern %>% group_by(interval,wtype) %>% summarise(avg = mean(steps,na.
 ggplot(aes(x=interval,y=avg)) + geom_line()+ geom_smooth() + facet_wrap(~wtype,ncol = 1,nrow = 2) + ggtitle("Weekday vs Weekend Activity Comparisions")
 ```
 
-![](Reproducible_Research_I_files/figure-html/unnamed-chunk-17-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-17-1.png)<!-- -->
 
 From the two plots it seems that the test object is more active earlier in the day during weekdays compared to weekends, but more active throughout the weekends compared with weekdays.
 
